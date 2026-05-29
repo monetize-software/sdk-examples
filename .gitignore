@@ -1,0 +1,4 @@
+# Each example brings its own .gitignore; this one covers anything that
+# might leak into the repo root.
+.DS_Store
+*.log
