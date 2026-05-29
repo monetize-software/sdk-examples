@@ -1,0 +1,26 @@
+{
+  "name": "monetize-sdk-extension-demo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "MV3 reference extension showing offscreen-backed paywall integration with @monetize.software/sdk-extension.",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "npm run clean && vite build --config vite.config.ts && vite build --config vite.content.config.ts",
+    "dev": "npm run clean && (vite build --watch --config vite.config.ts & vite build --watch --config vite.content.config.ts & wait)",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@monetize.software/sdk": "3.0.0-alpha.11",
+    "@monetize.software/sdk-extension": "3.0.0-alpha.14"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "4.1.16",
+    "@types/chrome": "0.0.293",
+    "@types/node": "22.10.5",
+    "preact": "10.27.0",
+    "tailwindcss": "4.1.16",
+    "typescript": "5.7.3",
+    "vite": "6.4.2"
+  }
+}
