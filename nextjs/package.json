@@ -11,8 +11,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@monetize.software/sdk": "3.0.0-alpha.19",
-    "@monetize.software/sdk-react": "3.0.0-alpha.19",
+    "@monetize.software/sdk": "3.0.0-alpha.20",
+    "@monetize.software/sdk-react": "3.0.0-alpha.20",
     "next": "16.2.6",
     "react": "19.1.0",
     "react-dom": "19.1.0"
