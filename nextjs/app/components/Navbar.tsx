@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import Link from 'next/link';
 import {
   usePaywallUser,
@@ -10,17 +11,42 @@ import {
 /**
  * Demonstrates:
  *  - usePaywallUser()  — discriminated union: loading | guest | signed_in.
- *  - usePaywall()      — direct handle for `auth.signOut()`.
+ *  - usePaywall()      — direct handle for `auth.signOut()` and
+ *                        `billing.getCustomerPortalUrl()` (Manage plan flow).
  *  - PaywallButton     — declarative trigger with `mode="signin"`.
  */
 export function Navbar() {
   const account = usePaywallUser();
   const paywall = usePaywall();
+  const [portalLoading, setPortalLoading] = useState(false);
 
   const isPro =
     account.status === 'signed_in' &&
     account.user?.has_active_subscription === true;
   const signedIn = account.status === 'signed_in';
+
+  // Manage plan: open the acquirer's hosted customer portal in a new tab.
+  // The SDK already knows the user (Bearer / identity); the backend resolves
+  // the matching Stripe/Paddle/Chargebee portal URL and we just window.open it.
+  // We deliberately don't go through <PaywallButton> here — Manage is a
+  // headless action (no modal needed), and the button needs its own busy
+  // state while the URL is being created (200-500ms RTT to the acquirer).
+  const onManagePlan = async () => {
+    if (!paywall) return;
+    setPortalLoading(true);
+    try {
+      const { url } = await paywall.billing.getCustomerPortalUrl();
+      window.open(url, '_blank', 'noopener,noreferrer');
+    } catch (err) {
+      // 403 — acquirer doesn't support portal (some Paddle/Chargebee setups)
+      // or the user lost their subscription between render and click. Falls
+      // back to the regular paywall flow so the user isn't stuck.
+      console.error('Failed to open customer portal', err);
+      paywall.open();
+    } finally {
+      setPortalLoading(false);
+    }
+  };
 
   return (
     <header className="border-b border-stone-200 bg-white/70 backdrop-blur dark:border-stone-800 dark:bg-stone-950/70">
@@ -66,9 +92,21 @@ export function Navbar() {
             </PaywallButton>
           )}
 
-          <PaywallButton className="rounded-md bg-brand-500 px-3 py-1.5 text-sm font-medium text-white hover:bg-brand-600">
-            {isPro ? 'Manage plan' : 'Upgrade'}
-          </PaywallButton>
+          {isPro ? (
+            <button
+              type="button"
+              onClick={onManagePlan}
+              disabled={portalLoading || !paywall}
+              aria-busy={portalLoading ? true : undefined}
+              className="rounded-md bg-brand-500 px-3 py-1.5 text-sm font-medium text-white hover:bg-brand-600 disabled:cursor-not-allowed disabled:opacity-60"
+            >
+              {portalLoading ? 'Opening…' : 'Manage plan'}
+            </button>
+          ) : (
+            <PaywallButton className="rounded-md bg-brand-500 px-3 py-1.5 text-sm font-medium text-white hover:bg-brand-600">
+              Upgrade
+            </PaywallButton>
+          )}
         </div>
       </nav>
     </header>
