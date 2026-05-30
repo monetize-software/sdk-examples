@@ -68,6 +68,7 @@ export function PriceCard({ price, highlighted }: Props) {
       ) : null}
       <div className="mt-6">
         <PaywallButton
+          priceId={price.id}
           className={
             'w-full rounded-lg px-4 py-2.5 text-sm font-medium ' +
             (highlighted

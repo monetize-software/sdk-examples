@@ -109,7 +109,10 @@ export default function PricingPage() {
                       {p.trial_days ? `${p.trial_days} days` : '—'}
                     </td>
                     <td className="px-4 py-3 text-right">
-                      <PaywallButton className="rounded-md border border-stone-300 px-3 py-1 text-xs font-medium hover:bg-stone-50 dark:border-stone-700 dark:hover:bg-stone-800">
+                      <PaywallButton
+                        priceId={p.id}
+                        className="rounded-md border border-stone-300 px-3 py-1 text-xs font-medium hover:bg-stone-50 dark:border-stone-700 dark:hover:bg-stone-800"
+                      >
                         Choose
                       </PaywallButton>
                     </td>
