@@ -102,8 +102,8 @@ Reached through `usePaywall()`:
 
 ## Pinning vs. tracking alpha
 
-This example pins `@monetize.software/sdk@3.0.0-alpha.16` and
-`@monetize.software/sdk-react@3.0.0-alpha.16`. If you'd rather track the
+This example pins `@monetize.software/sdk@3.0.0-alpha.17` and
+`@monetize.software/sdk-react@3.0.0-alpha.17`. If you'd rather track the
 alpha channel, change both to the `alpha` tag:
 
 ```json

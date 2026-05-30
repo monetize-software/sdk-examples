@@ -31,11 +31,20 @@ export function Navbar() {
   // We deliberately don't go through <PaywallButton> here — Manage is a
   // headless action (no modal needed), and the button needs its own busy
   // state while the URL is being created (200-500ms RTT to the acquirer).
+  //
+  // returnUrl: the user lands here when they hit "Return to ..." inside the
+  // hosted portal. Without it the backend falls back to its own paywall
+  // page on the online-service domain — useless for a self-hosted app.
   const onManagePlan = async () => {
     if (!paywall) return;
     setPortalLoading(true);
     try {
-      const { url } = await paywall.billing.getCustomerPortalUrl();
+      const { url } = await paywall.billing.getCustomerPortalUrl({
+        returnUrl:
+          typeof window !== 'undefined'
+            ? `${window.location.origin}/account`
+            : undefined
+      });
       window.open(url, '_blank', 'noopener,noreferrer');
     } catch (err) {
       // 403 — acquirer doesn't support portal (some Paddle/Chargebee setups)
