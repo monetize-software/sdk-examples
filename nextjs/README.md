@@ -5,6 +5,8 @@ A working Next.js 16 (App Router) demo of the
 package. The app is a tiny Pomodoro focus timer with a real paywall —
 free tier, Pro tier, login, subscription management and gated features.
 
+**Live demo:** <https://monetize-software-sdk-nextjs-example.vercel.app>
+
 Every public export from `@monetize.software/sdk-react` is used at least
 once. See the [API map](#sdk-api-map) below.
 
@@ -100,8 +102,8 @@ Reached through `usePaywall()`:
 
 ## Pinning vs. tracking alpha
 
-This example pins `@monetize.software/sdk@3.0.0-alpha.10` and
-`@monetize.software/sdk-react@3.0.0-alpha.10`. If you'd rather track the
+This example pins `@monetize.software/sdk@3.0.0-alpha.12` and
+`@monetize.software/sdk-react@3.0.0-alpha.12`. If you'd rather track the
 alpha channel, change both to the `alpha` tag:
 
 ```json

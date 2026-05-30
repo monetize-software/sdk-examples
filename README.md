@@ -8,7 +8,7 @@ a **standalone project** — clone the repo, `cd` into the one you care about,
 
 | Channel | Path | What it shows |
 | --- | --- | --- |
-| **Next.js 16** (App Router) | [`nextjs/`](nextjs/) | Full FocusFlow demo: Provider, every public hook (`usePaywall`, `usePaywallUser`, `usePaywallAccess`, `usePaywallPrices`, `usePaywallOffer`, `usePaywallTrial`, `usePaywallVisibility`, `usePaywallEvent`, `usePaywallState`), every declarative component (`PaywallGate`, `PaywallButton`, `PaywallSupportButton`), managed-auth flows (signin / signup / anonymous), and direct `PaywallUI` methods (`track`, `auth.signOut`, `getUserLanguage`). |
+| **Next.js 16** (App Router) | [`nextjs/`](nextjs/) — [live demo](https://monetize-software-sdk-nextjs-example.vercel.app) | Full FocusFlow demo: Provider, every public hook (`usePaywall`, `usePaywallUser`, `usePaywallAccess`, `usePaywallPrices`, `usePaywallOffer`, `usePaywallTrial`, `usePaywallVisibility`, `usePaywallEvent`, `usePaywallState`), every declarative component (`PaywallGate`, `PaywallButton`, `PaywallSupportButton`), managed-auth flows (signin / signup / anonymous), and direct `PaywallUI` methods (`track`, `auth.signOut`, `getUserLanguage`). |
 | **MV3 Chrome extension** | [`browser-extension/`](browser-extension/) | Offscreen-backed paywall shared across SW, popup and every tab's content-script. Floating widget, ApiGatewayClient with auto-open on 402 quota errors, DeepSeek text + Replicate image / upscale demos. Uses `@monetize.software/sdk-extension`. |
 
 More channels coming. Each example is pinned to a published SDK alpha so it stays runnable as the SDK evolves.
