@@ -11,8 +11,8 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@monetize.software/sdk": "3.0.0-alpha.11",
-    "@monetize.software/sdk-extension": "3.0.0-alpha.14"
+    "@monetize.software/sdk": "3.0.0-alpha.18",
+    "@monetize.software/sdk-extension": "3.0.0-alpha.21"
   },
   "devDependencies": {
     "@tailwindcss/vite": "4.1.16",
