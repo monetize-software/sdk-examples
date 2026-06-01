@@ -17,6 +17,14 @@ export function Footer() {
           <Link href="/pricing" className="hover:text-brand-600">
             Pricing
           </Link>
+          <a
+            href="https://github.com/monetize-software/sdk-examples/tree/main/nextjs"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-brand-600"
+          >
+            GitHub
+          </a>
           <PaywallSupportButton className="text-sm underline-offset-2 hover:text-brand-600 hover:underline">
             Contact support
           </PaywallSupportButton>
