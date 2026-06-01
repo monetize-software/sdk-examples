@@ -8,8 +8,7 @@ content-script — sign in once, all surfaces update live.
 
 - **Service worker** (`sw.ts`) — installs the cross-surface router via
   `installRouter` from `@monetize.software/sdk-extension/sw`. Picks
-  `paywallId` / `apiOrigin` from `chrome.storage.local` (defaults to the
-  test paywall `id=3` on `https://onlineapp.stream`).
+  `paywallId` / `apiOrigin` from `chrome.storage.local`.
 - **Offscreen document** (`offscreen-bootstrap.ts` + `offscreen.html`) —
   hosts the real `BillingClient` + `AuthClient` and a `localStorage`-backed
   session. The SW can't have `localStorage`; the offscreen doc can.
@@ -54,13 +53,6 @@ npm run dev
 
 Vite rebuilds `dist/` on each save. After the SW or content script
 changes, click **Reload** on the extension card in `chrome://extensions`.
-
-## Pinning
-
-This example uses:
-
-- `@monetize.software/sdk-extension@3.0.0-alpha.14`
-- `@monetize.software/sdk@3.0.0-alpha.11`
 
 ## Notes
 

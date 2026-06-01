@@ -99,16 +99,3 @@ Reached through `usePaywall()`:
 - **Strict mode**: in dev mode React double-mounts components; the provider
   destroys and re-creates `PaywallUI` once. This is expected.
 - **TypeScript**: `strict: true` works out of the box.
-
-## Pinning vs. tracking alpha
-
-This example pins `@monetize.software/sdk@3.0.0-alpha.17` and
-`@monetize.software/sdk-react@3.0.0-alpha.17`. If you'd rather track the
-alpha channel, change both to the `alpha` tag:
-
-```json
-"@monetize.software/sdk": "alpha",
-"@monetize.software/sdk-react": "alpha"
-```
-
-Be aware: alpha versions can rename APIs between releases.
