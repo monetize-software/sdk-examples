@@ -9,14 +9,14 @@ importers:
   .:
     dependencies:
       '@monetize.software/sdk':
-        specifier: 3.0.0-beta.4
-        version: 3.0.0-beta.4
+        specifier: 3.0.0-beta.7
+        version: 3.0.0-beta.7
       '@monetize.software/sdk-extension':
         specifier: 3.0.0-beta.0
-        version: 3.0.0-beta.0(@monetize.software/sdk@3.0.0-beta.4)
+        version: 3.0.0-beta.0(@monetize.software/sdk@3.0.0-beta.7)
       '@monetize.software/sdk-react':
-        specifier: 3.0.0-beta.4
-        version: 3.0.0-beta.4(@monetize.software/sdk@3.0.0-beta.4)(react@19.2.7)
+        specifier: 3.0.0-beta.7
+        version: 3.0.0-beta.7(@monetize.software/sdk@3.0.0-beta.7)(react@19.2.7)
     devDependencies:
       '@tailwindcss/vite':
         specifier: 4.1.16
@@ -222,17 +222,17 @@ packages:
       '@monetize.software/sdk':
         optional: true
 
-  '@monetize.software/sdk-react@3.0.0-beta.4':
-    resolution: {integrity: sha512-8EviRS3GigugsYe5XeMSOJybSCQXLE7fntycF6eAX0ill8u7D9lSRRJI60pesEumgBMbQkgJ8dA7oTS3w0ChLg==}
+  '@monetize.software/sdk-react@3.0.0-beta.7':
+    resolution: {integrity: sha512-gX/3/lwzfvSXTpSvJnD84bJ8h+ad/toCXZlRD99ZLB35i/NSgTfG7e5pnEqDMiz6GFVf6A2GYJIdywDrHYhLRQ==}
     peerDependencies:
-      '@monetize.software/sdk': 3.0.0-beta.4
+      '@monetize.software/sdk': 3.0.0-beta.7
       react: '>=18'
     peerDependenciesMeta:
       '@monetize.software/sdk':
         optional: true
 
-  '@monetize.software/sdk@3.0.0-beta.4':
-    resolution: {integrity: sha512-na3mpuenkUZecMxGILOL4AknTZi8KJZ31BblfURNIe1Ugll0vdaWwVYH/1PvwaFOQ6rQ9nV5t7eqTdcbVIyCTA==}
+  '@monetize.software/sdk@3.0.0-beta.7':
+    resolution: {integrity: sha512-rtCBzcWPo3OdLecjIh2dIkXdc1yuEMWHwSNOCNyRAdZZQktIQaiCRc9XeG6wepwJOom/kO8VjckLPBpr86epag==}
 
   '@rollup/rollup-android-arm-eabi@4.61.1':
     resolution: {integrity: sha512-JnBB8MdXj45cajvTuO5FmPlvFVJRQgvrz1uSEl3NwqFnReAPGwb8EanbGi4z2nRaqLzjJSv5/JmycoTKlRZxHA==}
@@ -785,19 +785,19 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
 
-  '@monetize.software/sdk-extension@3.0.0-beta.0(@monetize.software/sdk@3.0.0-beta.4)':
+  '@monetize.software/sdk-extension@3.0.0-beta.0(@monetize.software/sdk@3.0.0-beta.7)':
     dependencies:
       preact: 10.27.0
     optionalDependencies:
-      '@monetize.software/sdk': 3.0.0-beta.4
+      '@monetize.software/sdk': 3.0.0-beta.7
 
-  '@monetize.software/sdk-react@3.0.0-beta.4(@monetize.software/sdk@3.0.0-beta.4)(react@19.2.7)':
+  '@monetize.software/sdk-react@3.0.0-beta.7(@monetize.software/sdk@3.0.0-beta.7)(react@19.2.7)':
     dependencies:
       react: 19.2.7
     optionalDependencies:
-      '@monetize.software/sdk': 3.0.0-beta.4
+      '@monetize.software/sdk': 3.0.0-beta.7
 
-  '@monetize.software/sdk@3.0.0-beta.4':
+  '@monetize.software/sdk@3.0.0-beta.7':
     dependencies:
       preact: 10.27.0
 
