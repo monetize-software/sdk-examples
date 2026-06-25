@@ -9,11 +9,11 @@ importers:
   .:
     dependencies:
       '@monetize.software/sdk':
-        specifier: 3.0.0-beta.7
-        version: 3.0.0-beta.7
+        specifier: 3.0.0
+        version: 3.0.0
       '@monetize.software/sdk-react':
-        specifier: 3.0.0-beta.7
-        version: 3.0.0-beta.7(@monetize.software/sdk@3.0.0-beta.7)(react@19.1.0)
+        specifier: 3.0.0
+        version: 3.0.0(@monetize.software/sdk@3.0.0)(react@19.1.0)
       next:
         specifier: 16.2.6
         version: 16.2.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -221,17 +221,17 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
-  '@monetize.software/sdk-react@3.0.0-beta.7':
-    resolution: {integrity: sha512-gX/3/lwzfvSXTpSvJnD84bJ8h+ad/toCXZlRD99ZLB35i/NSgTfG7e5pnEqDMiz6GFVf6A2GYJIdywDrHYhLRQ==}
+  '@monetize.software/sdk-react@3.0.0':
+    resolution: {integrity: sha512-9TmBlaUxKszvqpJEN5p3B45oSt0p0l/auoCalM0xs70xFT2LuyXHM5ywyAMOoVKqQVa9/GizpEw0isTHo1xt6Q==}
     peerDependencies:
-      '@monetize.software/sdk': 3.0.0-beta.7
+      '@monetize.software/sdk': 3.0.0
       react: '>=18'
     peerDependenciesMeta:
       '@monetize.software/sdk':
         optional: true
 
-  '@monetize.software/sdk@3.0.0-beta.7':
-    resolution: {integrity: sha512-rtCBzcWPo3OdLecjIh2dIkXdc1yuEMWHwSNOCNyRAdZZQktIQaiCRc9XeG6wepwJOom/kO8VjckLPBpr86epag==}
+  '@monetize.software/sdk@3.0.0':
+    resolution: {integrity: sha512-W/yqdjSG/aPtIFDU2PjumNBSrZxWv7cMNJxuHtQ/6ZddgLNpa2ouRuH7O8rW0Xyjb7xCfPu2ro29SDuWbKee0w==}
 
   '@next/env@16.2.6':
     resolution: {integrity: sha512-gd8HoHN4ufj73WmR3JmVolrpJR47ILK6LouP5xElPglaVxir6e1a7VzvTvDWkOoPXT9rkkTzyCxBu4yeZfZwcw==}
@@ -834,13 +834,13 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
 
-  '@monetize.software/sdk-react@3.0.0-beta.7(@monetize.software/sdk@3.0.0-beta.7)(react@19.1.0)':
+  '@monetize.software/sdk-react@3.0.0(@monetize.software/sdk@3.0.0)(react@19.1.0)':
     dependencies:
       react: 19.1.0
     optionalDependencies:
-      '@monetize.software/sdk': 3.0.0-beta.7
+      '@monetize.software/sdk': 3.0.0
 
-  '@monetize.software/sdk@3.0.0-beta.7':
+  '@monetize.software/sdk@3.0.0':
     dependencies:
       preact: 10.29.2
 
