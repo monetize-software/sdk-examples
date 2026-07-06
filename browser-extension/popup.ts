@@ -1,9 +1,9 @@
 // Realistic-выглядящий demo. Имитирует продукт «Snapshot AI» — мнимый
-// AI-инструмент с premium-фичами. Цель — пощёлкать пейвол, login, account
+// AI-инструмент с premium-фичами. Цель — пощёлкать пейволл, login, account
 // state в условиях, близких к реальному extension'у.
 //
 // Архитектура: vanilla TS + полная перерисовка #app на каждом state-change.
-// PaywallUI отвечает за пейвол/auth-модалки; popup читает paywall.billing
+// PaywallUI отвечает за пейволл/auth-модалки; popup читает paywall.billing
 // и paywall.auth как single source of truth.
 
 import { PaywallUI } from '@monetize.software/sdk-extension';
@@ -291,7 +291,7 @@ async function init(): Promise<void> {
       flashToast('success', `${feat.title} — done`);
       return;
     }
-    // Не залогинен или без подписки — открываем пейвол. Если у юзера уже
+    // Не залогинен или без подписки — открываем пейволл. Если у юзера уже
     // есть active subscription (host забыл getAccess()), SDK сам покажет
     // restored view вместо тарифов.
     paywall.open();

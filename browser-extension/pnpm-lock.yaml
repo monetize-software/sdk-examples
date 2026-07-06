@@ -9,14 +9,14 @@ importers:
   .:
     dependencies:
       '@monetize.software/sdk':
-        specifier: 3.0.0
-        version: 3.0.0
+        specifier: 3.1.0-rc.0
+        version: 3.1.0-rc.0
       '@monetize.software/sdk-extension':
-        specifier: 3.0.0-beta.0
-        version: 3.0.0-beta.0(@monetize.software/sdk@3.0.0)
+        specifier: 3.2.0-rc.0
+        version: 3.2.0-rc.0(@monetize.software/sdk@3.1.0-rc.0)
       '@monetize.software/sdk-react':
-        specifier: 3.0.0
-        version: 3.0.0(@monetize.software/sdk@3.0.0)(react@19.2.7)
+        specifier: 3.1.0-rc.0
+        version: 3.1.0-rc.0(@monetize.software/sdk@3.1.0-rc.0)(react@19.2.7)
     devDependencies:
       '@tailwindcss/vite':
         specifier: 4.1.16
@@ -214,25 +214,25 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
-  '@monetize.software/sdk-extension@3.0.0-beta.0':
-    resolution: {integrity: sha512-eYyrmyb6/TWStGI4R7gn0KkeupX6nack36yuVZDzrd1tnHPKA8bH+mSkd/wJKbnJvTV/tLAe3EnMd+uY+UIJYQ==}
+  '@monetize.software/sdk-extension@3.2.0-rc.0':
+    resolution: {integrity: sha512-D9OIBtv0g/hrCxxgdoU8CcTCOXrRdloQSpNclj/2c6B/pHCuxdXX2H43grqkEZpB6KEDRkcHR44L5F2Uj3BloQ==}
     peerDependencies:
-      '@monetize.software/sdk': 3.0.0-beta.0
+      '@monetize.software/sdk': 3.1.0-rc.0
     peerDependenciesMeta:
       '@monetize.software/sdk':
         optional: true
 
-  '@monetize.software/sdk-react@3.0.0':
-    resolution: {integrity: sha512-9TmBlaUxKszvqpJEN5p3B45oSt0p0l/auoCalM0xs70xFT2LuyXHM5ywyAMOoVKqQVa9/GizpEw0isTHo1xt6Q==}
+  '@monetize.software/sdk-react@3.1.0-rc.0':
+    resolution: {integrity: sha512-dzlfNHbPqcl1/1Owq3BNQ5RPoLx34UANDrfGmBvo8+IBjmzIjCO87OozAdsyLxnppFLI+MP8C8ycwW1jFbmQQw==}
     peerDependencies:
-      '@monetize.software/sdk': 3.0.0
+      '@monetize.software/sdk': 3.1.0-rc.0
       react: '>=18'
     peerDependenciesMeta:
       '@monetize.software/sdk':
         optional: true
 
-  '@monetize.software/sdk@3.0.0':
-    resolution: {integrity: sha512-W/yqdjSG/aPtIFDU2PjumNBSrZxWv7cMNJxuHtQ/6ZddgLNpa2ouRuH7O8rW0Xyjb7xCfPu2ro29SDuWbKee0w==}
+  '@monetize.software/sdk@3.1.0-rc.0':
+    resolution: {integrity: sha512-RsTGR/cncH4tPiJK/LYRXsBs1PsdD/AUNWKlXmfbYpDkX9vG2ScubOg5OccAU3t8CnC2enxF9JLDN2j5SKxyTQ==}
 
   '@rollup/rollup-android-arm-eabi@4.61.1':
     resolution: {integrity: sha512-JnBB8MdXj45cajvTuO5FmPlvFVJRQgvrz1uSEl3NwqFnReAPGwb8EanbGi4z2nRaqLzjJSv5/JmycoTKlRZxHA==}
@@ -785,19 +785,19 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
 
-  '@monetize.software/sdk-extension@3.0.0-beta.0(@monetize.software/sdk@3.0.0)':
+  '@monetize.software/sdk-extension@3.2.0-rc.0(@monetize.software/sdk@3.1.0-rc.0)':
     dependencies:
       preact: 10.27.0
     optionalDependencies:
-      '@monetize.software/sdk': 3.0.0
+      '@monetize.software/sdk': 3.1.0-rc.0
 
-  '@monetize.software/sdk-react@3.0.0(@monetize.software/sdk@3.0.0)(react@19.2.7)':
+  '@monetize.software/sdk-react@3.1.0-rc.0(@monetize.software/sdk@3.1.0-rc.0)(react@19.2.7)':
     dependencies:
       react: 19.2.7
     optionalDependencies:
-      '@monetize.software/sdk': 3.0.0
+      '@monetize.software/sdk': 3.1.0-rc.0
 
-  '@monetize.software/sdk@3.0.0':
+  '@monetize.software/sdk@3.1.0-rc.0':
     dependencies:
       preact: 10.27.0
 

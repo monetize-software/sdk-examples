@@ -6,7 +6,7 @@
 // identity" (email/OAuth, не анонимно). Когда gateway отвечает 401:
 //   - если признак есть → openSignin() — показать форму, host знает что у юзера
 //     есть аккаунт, и просто помогает ему перелогиниться;
-//   - если нет, и пейвол разрешает анон-логин (`allow_anonymous=true` в
+//   - если нет, и пейволл разрешает анон-логин (`allow_anonymous=true` в
 //     bootstrap) → signInAnonymously() — headless silent восстановление;
 //   - если нет и `allow_anonymous=false` → openSignin(), потому что анон-флоу
 //     гарантированно вернёт 403 от бэка, бессмысленно делать silent-попытку.
@@ -35,7 +35,7 @@ export function trackRealAuth(paywall: PaywallUI): void {
 }
 
 /** Открыть нужный flow в зависимости от того, был ли у юзера реальный логин
- *  ранее, и разрешает ли пейвол анон-вход. Вызывается из handleGatewayError
+ *  ранее, и разрешает ли пейволл анон-вход. Вызывается из handleGatewayError
  *  или напрямую host'ом. */
 export async function recoverFromUnauthorized(paywall: PaywallUI): Promise<void> {
   const stored = (await chrome.storage.local.get(HAD_REAL_AUTH_KEY)) as {
@@ -48,7 +48,7 @@ export async function recoverFromUnauthorized(paywall: PaywallUI): Promise<void>
     return;
   }
 
-  // Анон-fallback только если пейвол его разрешает. allow_anonymous=false →
+  // Анон-fallback только если пейволл его разрешает. allow_anonymous=false →
   // бэк гарантированно вернёт 403, лучше сразу показать форму. Если bootstrap
   // ещё не загружен (race на самом старте) — оптимистично пробуем анон;
   // в худшем случае получим 403 и UI покажет «Forbidden / Try again».
