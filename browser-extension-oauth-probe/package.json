@@ -1,0 +1,25 @@
+{
+  "name": "monetize-oauth-probe",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Diagnostic MV3 extension: compares OAuth sign-in from an action popup across @monetize.software/sdk and @monetize.software/sdk-extension.",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "npm run clean && vite build --config vite.config.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@monetize.software/sdk": "3.4.0",
+    "@monetize.software/sdk-extension": "3.4.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "4.1.16",
+    "@types/chrome": "0.0.293",
+    "@types/node": "22.10.5",
+    "preact": "10.27.0",
+    "tailwindcss": "4.1.16",
+    "typescript": "5.7.3",
+    "vite": "6.4.2"
+  }
+}

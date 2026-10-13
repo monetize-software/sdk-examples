@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "OAuth Probe — plain sdk vs sdk-extension",
+  "version": "0.1.0",
+  "description": "Diagnostic rig for the action-popup OAuth report (paywall #797). Runs the same sign-in through @monetize.software/sdk and @monetize.software/sdk-extension and records breadcrumbs that survive the popup dying.",
+  "permissions": ["offscreen", "storage", "sidePanel"],
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "sw.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "OAuth Probe"
+  }
+}
